@@ -1,20 +1,27 @@
 Gatilo web server
 =================
 
-A simple, robust, multithread HTTP and HTTPS server implemented using c++.
-
+A simple, robust, multithread HTTP/2 server implemented using c++.
 
 ## Features
 
+* Simple
 * Robust
 * Multithreded
-* HTTPS support
 
 
 ## Dependencies
 
+* C++11 compliant compiler
 * CMake (sudo apt-get install cmake)
-* C++
+* GTest (sudo apt-get install libgtest-dev)
+
+    If CMake do not find GTest,
+        
+        cd /usr/src/gtest
+        sudo cmake .
+        sudo make
+        sudo mv libg* /usr/lib/
 
 ## Compile and Run
 
@@ -22,6 +29,8 @@ A simple, robust, multithread HTTP and HTTPS server implemented using c++.
     cd build
     cmake ..
     make 
+
+    To enable tests, cmake with -Dtest=ON flag
     
 ## Usage
 
